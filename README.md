@@ -6,7 +6,7 @@ In our second set of audit---<i>Personalized audit</i>, we determine the impact 
   
 **1. Queries file**  
 filename: *queries.csv* [(download)](https://raw.githubusercontent.com/social-comp/AmazonAudit-data/main/queries.csv)
-   The file consists of a complete list of 48 search queries used in the audit study. It contains the following fields: -
+   The file consists of a complete list of 48 search queries used in the audit study. It contains the following fields:-
   
   * ```query:``` name of the search query
   * ```topic:``` name of the vaccine-related search topic  
@@ -14,13 +14,13 @@ filename: *queries.csv* [(download)](https://raw.githubusercontent.com/social-co
    A snippet:
    
 ```html
-query    topic                                                                                           
-autism vaccine     mmr vaccine and autism
+query	topic                                                                                  
+vaccination book	vaccination
 ```
 
 
 **2. Unpersonalized Experiment**
-* Unpersonalised search results: all_results.csv* [(download)](https://github.com/social-comp/YouTubeAudit-data/blob/master/all_results.csv?raw=true) The file contains a collection of 36,000 search results and their meta data collected over 15 days. The file contains the following fields: -
+* __Unpersonalised search results__: all_results.csv* [(download)](https://github.com/social-comp/YouTubeAudit-data/blob/master/all_results.csv?raw=true) The file contains a collection of 36,000 search results and their meta data collected over 15 days. The file contains the following fields:-
    * ```query:``` name of the query searched
    * ```topic:``` name of the vaccine-related search topic 
    * ```date_exp_run:``` date on which the search was performed
