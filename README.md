@@ -4,8 +4,7 @@ This webpage contains details about the data accompanying CHI 2021 paper Auditin
 In our second set of audit---<i>Personalized audit</i>, we determine the impact of personalization due to user history on the amount of health misinformation returned in search results, recommendations and auto-complete suggestions. User history is built progressively over 7 days by performing several real-world actions such as search, search + click, search + click + add to cart, search + click + mark top-rated all positive review as helpful, follow contributor and search on third party website. The second audit resulted in  search results and  recommendations. The audit data is spread across four files. The description of each file along with their downloadable link is listed below
   
   
-**1. Queries file**  
-filename: *queries.csv* [(download)](https://raw.githubusercontent.com/social-comp/AmazonAudit-data/main/queries.csv)
+**1. Queries file** filename- *queries.csv* [(download)](https://raw.githubusercontent.com/social-comp/AmazonAudit-data/main/queries.csv)
    The file consists of a complete list of 48 search queries used in the audit study. It contains the following fields:-
   
   * ```query:``` name of the search query
@@ -20,7 +19,8 @@ vaccination book	vaccination
 
 
 **2. Unpersonalized Experiment**
-* __Unpersonalised search results__: all_results.csv* [(download)](https://github.com/social-comp/YouTubeAudit-data/blob/master/all_results.csv?raw=true) The file contains a collection of 36,000 search results and their meta data collected over 15 days. The file contains the following fields:-
+* __Unpersonalised search results__: filename- *all_results.csv* [(download)](https://github.com/social-comp/YouTubeAudit-data/blob/master/all_results.csv?raw=true) 
+The file contains a collection of 36,000 search results and their meta data collected over 15 days. The file contains the following fields:-
    * ```query:``` name of the query searched
    * ```topic:``` name of the vaccine-related search topic 
    * ```date_exp_run:``` date on which the search was performed
