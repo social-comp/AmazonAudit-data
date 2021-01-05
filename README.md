@@ -156,7 +156,7 @@ p29	8/12/2020	1	803657668	frequently bought together	http://www.amazon.com/New-L
 ```
 
 
-**4. Annotations**: filename- *all_unique_products.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/all_unique_products.csv). The file consists of a dataset of 4,997 unique Amazon products collected and annotated for health misinformation during our first and second audit data collection. It contains the following fields:-
+**3. Annotations**: filename- *all_unique_products.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/all_unique_products.csv). The file consists of a dataset of 4,997 unique Amazon products collected and annotated for health misinformation during our first and second audit data collection. It contains the following fields:-
   
   * ```url_code:``` URL code of the Amazon product
   * ```url:``` URL of the Amazon product  
