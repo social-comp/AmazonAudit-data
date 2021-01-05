@@ -42,7 +42,6 @@ A snippet:
 ```html
 query	topic	date_exp_run	filter	search_result_rank	URL	url_code	title	category	is_prime	price	is_sponsored	reviews	rating	date_of_publishing	bestseller	annotation
                                                         
-
 andrew wakefield	andrew wakefield	5/2/2020	featured	2	http://www.amazon.com/Vaccine-Court-Americas-Compensation-Program/dp/1629144525/ref=sr_1_2?dchild=1&keywords=andrew+wakefield&qid=1588435229&sr=8-2	1629144525	The Vaccine Court: The Dark Truth of America's Vaccine Injury Compensation Program	Books	Y	$24.49 	N	28 ratings	5.0 out of 5 stars	11-Nov-14	N	1
 ```
 
@@ -84,6 +83,78 @@ code	action	account_history_built_by_performising_action_on_product_type	search_
 
 p3	search+click+add_to_cart	neutral	featured	average customer review
 ```
+
+* __Personalised search results__: filename- *personalization_search_results.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/personalization_search_results.zip). The file contains a collection of 2,68,800 search results collected over 7 days during our <i>Personalized audit</i> run. It consists of the following fields:-
+   * ```topic:``` name of the vaccine-related search topic 
+   * ```query_with_underscore:``` name of the query searched separated by underscore
+   * ```query:``` name of the query searched
+   * ```folder:``` code of the sock puppet account. The attributes of the suck-pupper accounts is present in *account_details.csv*  
+   * ```filter:``` name of the Amazon filter used to sort search results
+   * ```date:``` date on which the data collection occurred
+   * ```rank:``` rank of the search result in the Search Engine Results Page (SERP)
+   * ```url_code:``` URL code of the Amazon product. This code is extracted from the product URL
+   * ```URL:``` URL of the Amazon product
+   * ```title:``` title of the Amazon product
+   
+A snippet:
+
+```html
+topic	query_with_underscore	query	folder	filter	date	rank	url_code	url	title
+                                              
+vaccination	vaccination	vaccination	p22	search_results_priceLtoH	8/12/2020	3	B00NS42D28	http://www.amazon.com/Vaccine-Injuries-Documented-Reactions-Vaccines-ebook/dp/B00NS42D28/ref=sr_1_3?dchild=1&keywords=vaccination&qid=1597219049&sr=8-3	Vaccine Injuries: Documented Adverse Reactions to Vaccines
+```
+
+* __Pre-purchase recommendations__: filename- *pre_purchase_recommendations_.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/pre_purchase_recommendations_.csv). The file contains pre-purchase recommendations collected during <i>Personalized audit</i> run. Pre-purchase recommendations consist of product suggestions that are presented to users after they add product(s) to cart. Pre-page recommendations could be of the types Frequently bought together, Customers also bought these highly rated items, Related to items you'veviewed, etc. The file consists of the following fields:-
+   * ```folder:``` code of the sock puppet account. The attributes of the suck-pupper accounts is present in *account_details.csv*  
+   * ```date:``` date on which the data collection occurred
+   * ```type_of_recommendation:``` this field indicates the type of pre-purchase recommendation
+   * ```rank:``` rank of the amazon product in the recommendation list of type present in the field <i>type_of_recommendation</i>
+   * ```url_code:``` URL code of the Amazon product. This code is extracted from the product URL
+   * ```URL:``` URL of the Amazon product
+   * ```annotation:``` annotation value assigned to the Amazon product
+   
+A snippet:
+
+```html
+folder	date	type_of_recommendation	rank	url_code	url	annotation
+                                              
+p3	8/12/2020	Customers who shopped	1	1441321659	http://www.amazon.com/gp/upsell-widgets/click-logger.html?widgetName=desktop-huc-carousels_huc-semantic-session-sims-scf&column=1&row=1&clickType=Title&url=%2Fdp%2F1441321659%3Fpsc%3D1%26pf_rd_p%3D995e9308-9761-4a71-9419-82fd033b88fd%26pf_rd_r%3DPSKTKDF89JM86WTTRXFX%26pd_rd_wg%3DNn0ES%26pd_rd_i%3D1441321659%26pd_rd_w%3D3ilS9%26pd_rd_r%3D39af52b4-1699-4cd5-924b-a0a89f52c26d%26ref_%3Dpd_luc_rh_crh_rh_sbs_sem_01_01_t_img_lh/	0
+```
+
+* __Homepage recommendations__: filename- *homepage_recommendations_.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/homepage_recommendations_.csv). The file contains homepage recommendations collected during <i>Personalized audit</i> run. These recommendations are present on the homepage of a user’s Amazonaccount. The homepage recommendations could be of three types Related to items you've viewed, Inspiredby your shopping trends and Recommended items other customers often buy again. The file consists of the following fields:-
+   * ```folder:``` code of the sock puppet account. The attributes of the suck-pupper accounts is present in *account_details.csv*  
+   * ```date:``` date on which the data collection occurred
+   * ```type_of_recommendation:``` this field indicates the type of homepage recommendation
+   * ```rank:``` rank of the amazon product in the recommendation list of type present in the field <i>type_of_recommendation</i>
+   * ```url_code:``` URL code of the Amazon product. This code is extracted from the product URL
+   * ```URL:``` URL of the Amazon product
+   * ```annotation:``` annotation value assigned to the Amazon product
+   
+A snippet:
+
+```html
+folder	date	type_of_recommendation	rank	url_code	url	annotation
+                                              
+p14	8/12/2020	Related to items you've viewed	1	188121740X	http://www.amazon.com/Millers-Review-Critical-Vaccine-Studies/dp/188121740X/	1
+```
+
+* __Product page recommendations__: filename- *product_page_recommendations_.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/product_page_recommendations_.csv). The file contains homepage recommendations collected during <i>Personalized audit</i> run. These are the recommendations present on the product page. They could be of five types namely, Frequently bought together, What other items customers buy after viewingthis item, Customers who viewed this item also viewed, Sponsored products related to this item and Customerswho bought this item also bought. The file consists of the following fields:-
+   * ```folder:``` code of the sock puppet account. The attributes of the suck-pupper accounts is present in *account_details.csv*  
+   * ```date:``` date on which the data collection occurred
+   * ```type_of_recommendation:``` this field indicates the type of product page recommendation
+   * ```rank:``` rank of the amazon product in the recommendation list of type present in the field <i>type_of_recommendation</i>
+   * ```url_code:``` URL code of the Amazon product. This code is extracted from the product URL
+   * ```URL:``` URL of the Amazon product
+   * ```annotation:``` annotation value assigned to the Amazon product
+   
+A snippet:
+
+```html
+folder	date	type_of_recommendation	rank	url_code	url	annotation
+                                              
+p29	8/12/2020	1	803657668	frequently bought together	http://www.amazon.com/New-Leadership-Challenge-Creating-Nursing/dp/0803657668/ref=pd_bxgy_img_2/131-1077905-1219437?_encoding=UTF8&pd_rd_i=0803657668&pd_rd_r=28c31f7a-ded6-4eea-8751-0ad00c46aabc&pd_rd_w=ELi0X&pd_rd_wg=UzbeC&pf_rd_p=ce6c479b-ef53-49a6-845b-bbbf35c28dd3&pf_rd_r=N9NDDMNCKY5Y8TB43V89&psc=1&refRID=N9NDDMNCKY5Y8TB43V89	0
+```
+
 
 **4. Annotations**: filename- *all_unique_products.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/all_unique_products.csv). The file consists of a dataset of 4,997 unique Amazon products collected and annotated for health misinformation during our first and second audit data collection. It contains the following fields:-
   
