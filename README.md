@@ -18,7 +18,7 @@ vaccination book	vaccination
 
 
 **2. Unpersonalized Experiment**
-* __Unpersonalised search results__: filename- *unpersonalized_seach_results.csv.csv* [(download)](https://github.com/social-comp/YouTubeAudit-data/blob/master/all_results.csv?raw=true). The file contains a collection of 36,000 search results and their meta data collected over 15 days. It contains the following fields:-
+* __Unpersonalised search results__: filename- *unpersonalized_seach_results.csv* [(download)](https://github.com/social-comp/YouTubeAudit-data/blob/master/all_results.csv?raw=true). The file contains a collection of 36,000 search results and their meta data collected over 15 days during our <i>Unpersonalized audit</i> run. It consists of the following fields:-
    * ```query:``` name of the query searched
    * ```topic:``` name of the vaccine-related search topic 
    * ```date_exp_run:``` date on which the search was performed
@@ -67,11 +67,23 @@ A snippet:
 query	topic	date_exp_run_x	filter	search_result_rank	URL	url_code	title	source_annotation	type_of_recommendation	destination_url	destination_url_code	recommendation_annotation                                                        
 
 andrew wakefield	andrew wakefield	5/2/2020	featured	1	http://www.amazon.com/Callous-Disregard-Autism-Vaccines-Tragedy-ebook/dp/B004N62HRQ/ref=sr_1_1?dchild=1&keywords=andrew+wakefield&qid=1588435229&sr=8-1	B004N62HRQ	Callous Disregard: Autism and Vaccines: The Truth Behind a Tragedy	1	customer_view_after_viewing	http://www.amazon.com/Vaccine-Illusion-Tetyana-Obukhanych-ebook/dp/B007AW2CLG/ref=pd_sbs_351_1/138-6517699-9726254?_encoding=UTF8&pd_rd_i=B007AW2CLG&pd_rd_r=aa42a33a-515e-4a68-9e04-4e59632333be&pd_rd_w=BE30s&pd_rd_wg=MlD9i&pf_rd_p=d13bb895-21d3-4e96-94a7-553aaae51224&pf_rd_r=QXT0TP71K2BNMZSXVGB5&psc=1&refRID=QXT0TP71K2BNMZSXVGB5	B007AW2CLG	1
-
 ```
 
 **2. Personalized Experiment**
-* __Personalised search results__: 
+* __Account details__: filename- *account_details.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/account_details.csv). The file contains the details of accounts set up in the <i>Personalized audit</i>. Each account builds up its history by performing real-world actions on products that were either all annotated as promoting misinformation, neutral or debunking. The file contains the following fields:-
+   * ```code:``` code assigned to the account
+   * ```action:``` real-world action performed by the sock-puppet account 
+   * ```account_history_built_by_performising_action_on_product_type:``` type of product on which the socket puppet account performs actions. The field can have one of the three values namely, promoting misinformation, neutral or debunking.
+   * ```search_filter1:``` name of the first Amazon filter used to sort results by the account
+   * ```search_filter2:``` name of the second Amazon filter used to sort results by the account
+ 
+ A snippet:
+
+```html
+code	action	account_history_built_by_performising_action_on_product_type	search_filter1	search_filter2                                                        
+
+p3	search+click+add_to_cart	neutral	featured	average customer review
+```
 
 **4. Annotations**: filename- *all_unique_products.csv* [(download)](https://github.com/social-comp/AmazonAudit-data/raw/main/all_unique_products.csv). The file consists of a dataset of 4,997 unique Amazon products collected and annotated for health misinformation during our first and second audit data collection. It contains the following fields:-
   
