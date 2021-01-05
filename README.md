@@ -5,3 +5,16 @@ In our second set of audit---<i>Personalized audit<i>, we determine the impact o
   
   
 **1. Queries file**  
+filename: *queries.csv* [(download)](https://raw.githubusercontent.com/social-comp/AmazonAudit-data/main/queries.csv)
+   The file consists of a complete list of 48 search queries used in the audit study. It contains the following fields: -
+  
+  * ```query:``` name of the search query
+  * ```topic:``` name of the vaccine-related search topic  
+  
+   A snippet:
+   
+  
+```html
+query     	           topic
+andrew wakefield	     andrew wakefield
+```
